@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import 'ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
+@import 'ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
+@import 'ngx-toastr/toastr';
+
+body{
+    background-color: rgba(94, 37, 4, 0.555);
+}
+.mainSec{
+    background-color: rgba(94, 37, 4, 0);
+}
+
+.btn-main{
+    @apply disabled:text-red-600 disabled:bg-gray-600 px-5 capitalize text-center mx-auto block mb-10 bg-gray-600 text-green-400 p-2 rounded-lg
+}
+.mainSec{
+    @apply rounded shadow m-12 p-4 
+}

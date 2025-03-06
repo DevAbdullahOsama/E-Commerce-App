@@ -1,0 +1,17 @@
+<section class="mainSec">
+        <h1 class="text-center text-3xl text-gray-600 font-bold capitalize">your wishlist</h1>
+        @for (wishlistProduct of wishlistProdust; track wishlistProduct.id) {
+            <div class="flex border-b mb-2 shadow p-4">
+                <div>
+                    <img [src]="wishlistProduct.imageCover" [alt]="wishlistProduct.title" class="w-[200px] h-[200px] mx-auto object-cover rounded-full">
+                </div>
+                <div class="flex justify-between items-center ps-2">
+                    <div>
+                        <h3>{{wishlistProduct.title}}</h3>
+                        <h4>{{wishlistProduct.price | currency:'GBP' }}</h4>
+                        <button (click)="removeItemFromWishlist(wishlistProduct._id)" class="capitalize"><i class="fa-solid fa-trash-can text-red-700 text-2xl"></i> remove</button>
+                    </div>
+                </div>
+            </div>
+        }
+    </section>
