@@ -1,3 +1,4 @@
+import { RenderMode } from '@angular/ssr';
 import { AuthLayoutComponent } from './layouts/auth-layout/auth-layout.component';
 import { Routes } from '@angular/router';
 import { authGuard } from './core/guards/auth.guard';
@@ -20,7 +21,7 @@ export const routes: Routes = [
                 {path:'categories',loadComponent:()=>import('./pages/categories/categories.component').then((c)=>c.CategoriesComponent),title:'Categories'},
                 {path:'allorders',loadComponent:()=>import('./pages/allorders/allorders.component').then((c)=>c.AllordersComponent),title:'All Orders'},
                 {path:'wishlist',loadComponent:()=>import('./pages/wishlist/wishlist.component').then((c)=>c.WishlistComponent),title:'Wishlist'},
-                {path:'checkout/:id',loadComponent:()=>import('./pages/checkout/checkout.component').then((c)=>c.CheckoutComponent),title:'Check Out'},
+                {path:'checkout/:id',loadComponent:()=>import('./pages/checkout/checkout.component').then((c)=>c.CheckoutComponent),title:'Check Out',},
                 {path:'details/:id',loadComponent:()=>import('./pages/details/details.component').then((c)=>c.DetailsComponent),title:'Details'},
                 {path:'**',loadComponent:()=>import('./pages/notfound/notfound.component').then((c)=>c.NotfoundComponent),title:'Not Found!'},
             ]}
